@@ -1,0 +1,51 @@
+//LIGHT MODE COLORS - for light/dark elements
+:root, :root.light {
+  --color--primary: #FFFFFF;
+  --color--secondary: #ffffff;
+  --color--light: #333333;
+  --color--dark: #a9a9a9;
+  --color--highlight: #00B0FF;
+  // --color--alternate: #FF4081;
+  --color--alternate: #40ff86;
+  --color--accent: #9C27B0;
+}
+
+//DARK MODE COLORS – for light/dark elements
+:root.dark {
+  --color--primary: #202123;
+  --color--secondary: #31323b;
+  --color--light: #FFFFFF;
+  --color--dark: #7b7b7b;
+  --color--highlight: #00B0FF;
+  // --color--alternate: #FF4081;
+  --color--alternate: #40ff86;
+  --color--accent: #9C27B0;
+}
+
+//GLOBAL COLORS
+$color--g-primary: #202123;
+$color--g-secondary: #31323b;
+$color--g-light: #ffffff;
+$color--g-border: #707388;
+
+//VARIABLE COLORS
+$color--primary: var(--color--primary);
+$color--secondary: var(--color--secondary);
+$color--light: var(--color--light);
+$color--dark: var(--color--dark);
+$color--highlight: var(--color--highlight);
+$color--alternate: var(--color--alternate);
+$color--accent: var(--color--accent);
+
+//BORDERS
+$border--width: 1px;
+$border--main: $border--width solid $color--g-border;
+$border--r-sm: 10px;
+
+//FONTS
+$font--w-rg: 300;
+$font--w-bd: 700;
+$font--s-lg: 2rem;
+$font--s-md: 1rem;
+$font--s-rg: .8rem;
+$font--s-sm: .7rem;

@@ -1,10 +1,10 @@
 :root, :root.light {
   --color--primary: #FFFFFF;
   --color--secondary: #ffffff;
-  --color--light: #FFFFFF;
-  --color--dark: #333333;
+  --color--light: #333333;
+  --color--dark: #a9a9a9;
   --color--highlight: #00B0FF;
-  --color--alternate: #FF4081;
+  --color--alternate: #40ff86;
   --color--accent: #9C27B0;
 }
 
@@ -12,7 +12,7 @@
   --color--primary: #202123;
   --color--secondary: #31323b;
   --color--light: #FFFFFF;
-  --color--dark: #CCCCCC;
+  --color--dark: #7b7b7b;
   --color--highlight: #00B0FF;
   --color--alternate: #40ff86;
   --color--accent: #9C27B0;
@@ -28,6 +28,7 @@ html {
   background: var(--color--primary);
   justify-content: center;
   align-items: center;
+  font-family: "Rubik", sans-serif;
 }
 
 body {
@@ -44,23 +45,28 @@ body {
   height: 0px;
 }
 
+.b-all {
+  border: 1px solid #707388;
+}
+
 .b-top {
-  border-top: 0.75px solid #707388;
+  border-top: 1px solid #707388;
 }
 
 .b-right {
-  border-right: 0.75px solid #707388;
+  border-right: 1px solid #707388;
 }
 
 .b-bottom {
-  border-bottom: 0.75px solid #707388;
+  border-bottom: 1px solid #707388;
 }
 
 .b-left {
-  border-left: 0.75px solid #707388;
+  border-left: 1px solid #707388;
 }
 
 #toolbar {
+  -webkit-app-region: drag;
   display: flex;
   flex-direction: column;
   background: #202123;
@@ -69,7 +75,7 @@ body {
 #toolbar #tb-primary {
   width: calc(100% - 78px);
   align-self: flex-end;
-  height: 36px;
+  height: 28px;
   background: #202123;
   box-sizing: border-box;
 }
@@ -94,7 +100,13 @@ body {
 #center-content {
   min-width: 300px;
   flex-grow: 1;
-  background: #ffffff;
+  background: var(--color--secondary);
+}
+
+#app-home {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 15px;
 }
 
 #tools-right {

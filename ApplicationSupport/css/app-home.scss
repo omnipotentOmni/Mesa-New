@@ -1,0 +1,46 @@
+@import "global";
+
+.home-preview-card {
+  display: flex;
+  flex-flow: column;
+  width: 25%;
+  margin: 15 15px;
+  height: 200px;
+  border: $border--main;
+  border-radius: $border--r-sm;
+  overflow: hidden;
+  box-sizing: border-box;
+  opacity: .8;  
+
+  &:hover {
+    opacity: 1;
+    border-color: $color--dark;
+    filter: drop-shadow(0 0 0.3rem $color--alternate);
+  }
+
+  & .home-preview-card-image {
+    background: $color--g-primary;
+    height: 145px;
+    cursor: pointer;
+  }
+
+  & .home-preview-card-label {
+    padding: 10px;
+    flex-grow: 1;
+    color: $color--light;
+    background: $color--secondary;
+    cursor: pointer;
+
+    & .title {
+      font-weight: $font--w-bd;
+      font-size: $font--s-rg;
+      margin-bottom: 2px;
+    }
+
+    & .context {
+      font-weight: $font--w-rg;
+      font-size: $font--s-sm;
+      color: $color--dark;
+    }
+  }
+}

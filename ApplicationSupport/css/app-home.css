@@ -1,0 +1,59 @@
+:root, :root.light {
+  --color--primary: #FFFFFF;
+  --color--secondary: #ffffff;
+  --color--light: #333333;
+  --color--dark: #a9a9a9;
+  --color--highlight: #00B0FF;
+  --color--alternate: #40ff86;
+  --color--accent: #9C27B0;
+}
+
+:root.dark {
+  --color--primary: #202123;
+  --color--secondary: #31323b;
+  --color--light: #FFFFFF;
+  --color--dark: #7b7b7b;
+  --color--highlight: #00B0FF;
+  --color--alternate: #40ff86;
+  --color--accent: #9C27B0;
+}
+
+.home-preview-card {
+  display: flex;
+  flex-flow: column;
+  width: 25%;
+  margin: 15 15px;
+  height: 200px;
+  border: 1px solid #707388;
+  border-radius: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+  opacity: 0.8;
+}
+.home-preview-card:hover {
+  opacity: 1;
+  border-color: var(--color--dark);
+  filter: drop-shadow(0 0 0.3rem var(--color--alternate));
+}
+.home-preview-card .home-preview-card-image {
+  background: #202123;
+  height: 145px;
+  cursor: pointer;
+}
+.home-preview-card .home-preview-card-label {
+  padding: 10px;
+  flex-grow: 1;
+  color: var(--color--light);
+  background: var(--color--secondary);
+  cursor: pointer;
+}
+.home-preview-card .home-preview-card-label .title {
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-bottom: 2px;
+}
+.home-preview-card .home-preview-card-label .context {
+  font-weight: 300;
+  font-size: 0.7rem;
+  color: var(--color--dark);
+}/*# sourceMappingURL=app-home.css.map */
