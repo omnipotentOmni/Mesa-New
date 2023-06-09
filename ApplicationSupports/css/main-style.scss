@@ -1,0 +1,126 @@
+//LIGHT MODE COLORS - for light/dark elements
+:root, :root.light {
+  --color--primary: #FFFFFF;
+  --color--secondary: #ffffff;
+  --color--light: #FFFFFF;
+  --color--dark: #333333;
+  --color--highlight: #00B0FF;
+  --color--alternate: #FF4081;
+  --color--accent: #9C27B0;
+}
+
+//DARK MODE COLORS – for light/dark elements
+:root.dark {
+  --color--primary: #202123;
+  --color--secondary: #31323b;
+  --color--light: #FFFFFF;
+  --color--dark: #CCCCCC;
+  --color--highlight: #00B0FF;
+  --color--alternate: #40ff86;
+  --color--accent: #9C27B0;
+}
+
+//GLOBAL COLORS
+$color--g-primary: #202123;
+$color--g-secondary: #31323b;
+$color--g-light: #ffffff;
+$color--g-border: #707388;
+
+//VARIABLE COLORS
+$color--primary: var(--color--primary);
+$color--secondary: var(--color--secondary);
+$color--light: var(--color--light);
+$color--dark: var(--color--dark);
+$color--highlight: var(--color--highlight);
+$color--alternate: var(--color--alternate);
+$color--accent: var(--color--accent);
+
+
+//BORDER WIDTH
+$border--width: .75px;
+
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  display: flex;
+  background: $color--primary;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  width: 100%;
+  min-width: 800px;
+  height: 100%;
+  display: flex;
+  align-content: flex-start;
+  flex-flow: column wrap;
+}
+
+.break {
+  &.horz {
+    width: 100%;
+    height: 0px;
+  }
+}
+
+.b-top {
+  border-top: $border--width solid $color--g-border;
+}
+.b-right {
+  border-right: $border--width solid $color--g-border;
+}
+.b-bottom {
+  border-bottom: $border--width solid $color--g-border;
+}
+.b-left {
+  border-left: $border--width solid $color--g-border;
+}
+
+#toolbar {
+  display: flex;
+  flex-direction: column;
+  background: $color--g-primary;
+  border-color: $color--g-border;
+
+  & #tb-primary {
+    width: calc(100% - 78px);
+    align-self: flex-end;
+    height: 36px;
+    background: $color--g-primary;
+    box-sizing: border-box;
+  }
+
+  & #tb-sub {
+    width: 100%;
+    height: 42px;
+    background: $color--g-secondary;
+  }
+}
+
+#primary-content {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#tools-left {
+  width: 250px;
+  background: $color--secondary;
+}
+
+#center-content {
+  min-width: 300px;
+  flex-grow: 1;
+  background: $color--g-light;
+}
+
+#tools-right {
+  min-width: 200px;
+  background: $color--secondary;
+}
