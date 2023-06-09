@@ -15,11 +15,11 @@
   &:hover {
     opacity: 1;
     border-color: $color--dark;
-    filter: drop-shadow(0 0 0.3rem $color--alternate);
+    filter: drop-shadow(0 0 0.3rem $color--accent);
   }
 
   & .home-preview-card-image {
-    background: $color--g-primary;
+    background: $color--primary;
     height: 145px;
     cursor: pointer;
   }
@@ -35,12 +35,20 @@
       font-weight: $font--w-bd;
       font-size: $font--s-rg;
       margin-bottom: 2px;
+
+      &::before {
+        content: attr(data-value)
+      }
     }
 
     & .context {
       font-weight: $font--w-rg;
       font-size: $font--s-sm;
       color: $color--dark;
+
+      &::before {
+        content: attr(data-value)
+      }
     }
   }
 }

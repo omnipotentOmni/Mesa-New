@@ -1,0 +1,7 @@
+<div class="home-preview-card">
+  <div class="home-preview-card-image"></div>
+  <div class="home-preview-card-label">
+    <div class="title" data-value=""></div>
+    <div class="context" data-value=""></div>
+  </div>
+</div>

@@ -1,11 +1,11 @@
 :root, :root.light {
-  --color--primary: #FFFFFF;
+  --color--primary: #ebebeb;
   --color--secondary: #ffffff;
-  --color--light: #333333;
+  --color--light: #31323b;
   --color--dark: #a9a9a9;
   --color--highlight: #00B0FF;
   --color--alternate: #40ff86;
-  --color--accent: #9C27B0;
+  --color--accent: #aa5bff;
 }
 
 :root.dark {
@@ -15,9 +15,17 @@
   --color--dark: #7b7b7b;
   --color--highlight: #00B0FF;
   --color--alternate: #40ff86;
-  --color--accent: #9C27B0;
+  --color--accent: #aa5bff;
 }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 html, body {
   margin: 0px;
   padding: 0px;
@@ -67,6 +75,7 @@ body {
 
 #toolbar {
   -webkit-app-region: drag;
+  position: relative;
   display: flex;
   flex-direction: column;
   background: #202123;
@@ -112,4 +121,63 @@ body {
 #tools-right {
   min-width: 200px;
   background: var(--color--secondary);
+}
+
+#app-home {
+  opacity: 0;
+  animation: fade-in 0.75s forwards;
+}
+
+#tb-primary {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: right;
+  position: relative;
+}
+
+#theme-settings {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  pointer-events: auto;
+}
+
+.theme-option {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 10px;
+  color: #ffffff;
+}
+.theme-option::before {
+  font-size: 0.8rem;
+  content: attr(data-label);
+}
+.theme-option:hover {
+  color: var(--color--accent);
+}
+
+#page-nav {
+  position: absolute;
+  left: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 100%;
+  pointer-events: auto;
+}
+
+.nav-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  color: #ffffff;
+}
+.nav-item::before {
+  font-size: 0.8rem;
+  content: attr(data-label);
+}
+.nav-item:hover {
+  color: var(--color--accent);
 }/*# sourceMappingURL=main-style.css.map */

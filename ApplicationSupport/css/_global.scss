@@ -1,13 +1,13 @@
 //LIGHT MODE COLORS - for light/dark elements
 :root, :root.light {
-  --color--primary: #FFFFFF;
+  --color--primary: #ebebeb;
   --color--secondary: #ffffff;
-  --color--light: #333333;
+  --color--light: #31323b;
   --color--dark: #a9a9a9;
   --color--highlight: #00B0FF;
   // --color--alternate: #FF4081;
   --color--alternate: #40ff86;
-  --color--accent: #9C27B0;
+  --color--accent: #aa5bff;
 }
 
 //DARK MODE COLORS – for light/dark elements
@@ -19,13 +19,14 @@
   --color--highlight: #00B0FF;
   // --color--alternate: #FF4081;
   --color--alternate: #40ff86;
-  --color--accent: #9C27B0;
+  --color--accent: #aa5bff;
 }
 
 //GLOBAL COLORS
 $color--g-primary: #202123;
 $color--g-secondary: #31323b;
 $color--g-light: #ffffff;
+$color--g-dark: #7b7b7b;
 $color--g-border: #707388;
 
 //VARIABLE COLORS
@@ -49,3 +50,20 @@ $font--s-lg: 2rem;
 $font--s-md: 1rem;
 $font--s-rg: .8rem;
 $font--s-sm: .7rem;
+
+//TIMING
+$timing--slw: 1s;
+$timing--reg: .75s;
+$timing--fst: .25s;
+
+
+
+//ANIMATIONS
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

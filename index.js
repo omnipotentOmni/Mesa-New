@@ -7,8 +7,8 @@ const BrowserWindow = electron.BrowserWindow;
 
 const createWindow = () => {
     const win = new BrowserWindow({
-      frame: false,
-      titleBarStyle: 'hidden',
+      // frame: false,
+      // titleBarStyle: 'hidden',
       webPreferences: {
         nodeIntegration: true,
         contextIsolation: false,

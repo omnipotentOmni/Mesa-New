@@ -1,11 +1,11 @@
 :root, :root.light {
-  --color--primary: #FFFFFF;
+  --color--primary: #ebebeb;
   --color--secondary: #ffffff;
-  --color--light: #333333;
+  --color--light: #31323b;
   --color--dark: #a9a9a9;
   --color--highlight: #00B0FF;
   --color--alternate: #40ff86;
-  --color--accent: #9C27B0;
+  --color--accent: #aa5bff;
 }
 
 :root.dark {
@@ -15,9 +15,17 @@
   --color--dark: #7b7b7b;
   --color--highlight: #00B0FF;
   --color--alternate: #40ff86;
-  --color--accent: #9C27B0;
+  --color--accent: #aa5bff;
 }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .home-preview-card {
   display: flex;
   flex-flow: column;
@@ -33,10 +41,10 @@
 .home-preview-card:hover {
   opacity: 1;
   border-color: var(--color--dark);
-  filter: drop-shadow(0 0 0.3rem var(--color--alternate));
+  filter: drop-shadow(0 0 0.3rem var(--color--accent));
 }
 .home-preview-card .home-preview-card-image {
-  background: #202123;
+  background: var(--color--primary);
   height: 145px;
   cursor: pointer;
 }
@@ -52,8 +60,14 @@
   font-size: 0.8rem;
   margin-bottom: 2px;
 }
+.home-preview-card .home-preview-card-label .title::before {
+  content: attr(data-value);
+}
 .home-preview-card .home-preview-card-label .context {
   font-weight: 300;
   font-size: 0.7rem;
   color: var(--color--dark);
+}
+.home-preview-card .home-preview-card-label .context::before {
+  content: attr(data-value);
 }/*# sourceMappingURL=app-home.css.map */
